@@ -48,49 +48,53 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(86, 100, 245, 70),
-        title: const Text(
+        title: Text(
           'Currency Exchange',
           style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: MediaQuery.of(context).size.width / 20),
         ),
         leading: const Icon(
           Icons.currency_exchange,
           color: Colors.white,
         ),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(
-              Icons.menu,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              // do something
-            },
-          )
-        ],
+        // actions: <Widget>[
+        //   IconButton(
+        //     icon: const Icon(
+        //       Icons.menu,
+        //       color: Colors.white,
+        //     ),
+        //     onPressed: () {
+        //       // do something
+        //     },
+        //   )
+        // ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: EdgeInsets.all(MediaQuery.of(context).size.width / 30),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
               padding: const EdgeInsets.fromLTRB(15, 10, 0, 5),
-              child: const Text(
+              child: Text(
                 'Select Currency',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: MediaQuery.of(context).size.width / 22),
               ),
             ),
             DropdownButtonFormField(
+              dropdownColor: Colors.white,
               decoration: InputDecoration(
-                contentPadding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 25),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
                   borderSide: const BorderSide(
                     color: Colors.blue,
-                    width: 2,
+                    width: 0.5,
                   ),
                 ),
               ),
